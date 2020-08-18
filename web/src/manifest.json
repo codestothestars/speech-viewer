@@ -1,0 +1,8 @@
+{
+  "background_color": "#488aff",
+  "display": "standalone",
+  "name": "speech-viewer",
+  "short_name": "speech-viewer",
+  "start_url": "/",
+  "theme_color": "#488aff"
+}

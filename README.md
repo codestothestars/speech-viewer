@@ -6,6 +6,8 @@ A website for viewing famous historical speeches.
 
 The speech viewer consists of multiple distinct components. For simplicity in coordinating these components, each is contained within its own subdirectory of this repository.
 
+- [`web`](./web) - The web front-end, a [Stencil](https://stenciljs.com) application built using [Node.js](https://nodejs.org).
+
 Each directory contains its own README with instructions for building and running.
 
 ### Contributing
