@@ -1,2 +1,3 @@
-# speech-viewer
-View famous speeches on the web.
+# Speech Viewer
+
+A website for viewing famous historical speeches.
