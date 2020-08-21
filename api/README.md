@@ -26,6 +26,14 @@ Invoke-WebRequest http://localhost:7071/api/speeches/by-author
 #     }
 # ]
 
+# Get content of a specified speech.
+Invoke-WebRequest http://localhost:7071/api/speeches/1/content
+# [
+#     "Four score and seven years ago...",
+#     "Now we are engaged...",
+#     "But, in a larger sense..."
+# ]
+
 # Destroy data.
 Invoke-WebRequest http://localhost:7071/api/destroy -Method POST
 ```
