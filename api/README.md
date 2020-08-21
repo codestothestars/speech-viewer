@@ -7,7 +7,11 @@ The API server for the speech viewer. Enables clients such as the [web front-end
 Examples using PowerShell, assuming the API is being hosted at `http://localhost:7071/api`. Response bodies, where applicable, are formatted as JSON.
 
 ```PowerShell
+# Initialize data.
+Invoke-WebRequest http://localhost:7071/api/initialize -Method POST
 
+# Destroy data.
+Invoke-WebRequest http://localhost:7071/api/destroy -Method POST
 ```
 
 ## Development
@@ -65,6 +69,16 @@ Run the API on a local development server using the Azure Functions Core Tools.
 ```Shell
 func start --prefix SpeechViewer
 ```
+
+### Initialize Database
+
+Note that the database is not populated by default, and must be initialized. To do this, run Initialize function as indicated in the first usage example above.
+
+### Database Migrations
+
+The API relies on database migrations to initialize and, when requested, destroy the database at runtime. Whenever you make a change to the API that requires a change to the database schema, add one SQL file that applies the migration ("up") and one that reverses it ("down") to the [migrations](./SpeechViewer/migrations) folder, following the existing `<timestamp>-<name>-<direction>.sql` convention.
+
+Once your migration is ready, [rebuild](#build) the app and run the [Initialize](#initialize-database) function to apply the migration.
 
 ### Contributing
 

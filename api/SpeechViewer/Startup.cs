@@ -19,6 +19,25 @@ namespace SpeechViewer
         public override void Configure(IFunctionsHostBuilder builder)
         {
             var services = builder.Services;
+
+            services.AddScoped<SqlConnection>(provider =>
+            {
+                var connectionString = new SqlConnectionStringBuilder
+                {
+                    DataSource = GetEnvironmentVariable("databaseServer"),
+                    InitialCatalog = GetEnvironmentVariable("databaseName"),
+                    Password = GetEnvironmentVariable("databasePassword"),
+                    UserID = GetEnvironmentVariable("databaseUser")
+                };
+
+                var connection = new SqlConnection(connectionString.ConnectionString);
+
+                connection.Open();
+
+                return connection;
+            });
+
+            services.AddTransient<Migrator>();
         }
 
         /// <summary>
