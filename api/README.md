@@ -71,3 +71,5 @@ func start --prefix SpeechViewer
 Before committing changes, make sure that you...
 
 1. Write/edit [XML documentation](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/xmldoc) for all new/modified members.
+1. Write/edit [MSTest](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-mstest) unit tests for all new/modified functionality.
+1. Run all unit tests with `dotnet test SpeechViewerTest` and correct all failures.
