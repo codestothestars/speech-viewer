@@ -10,6 +10,22 @@ Examples using PowerShell, assuming the API is being hosted at `http://localhost
 # Initialize data.
 Invoke-WebRequest http://localhost:7071/api/initialize -Method POST
 
+# List all speeches grouped by author.
+Invoke-WebRequest http://localhost:7071/api/speeches/by-author
+# [
+#     {
+#         "author": {
+#             "firstName": "Abraham",
+#             "id": 1,
+#             "lastName": "Lincoln"
+#         },
+#         "speeches": [
+#             {"id": 1, "name": "Gettysburg Address (Bancroft)"},
+#             {"id": 2, "name": "Gettysburg Address (Bliss)"}
+#         ]
+#     }
+# ]
+
 # Destroy data.
 Invoke-WebRequest http://localhost:7071/api/destroy -Method POST
 ```
