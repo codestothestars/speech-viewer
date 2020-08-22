@@ -44,6 +44,7 @@ Invoke-WebRequest http://localhost:7071/api/destroy -Method POST
 
 - [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) 3.1
 - [Azure Functions Core Tools](https://github.com/Azure/azure-functions-core-tools)
+- [Azure SQL Database](https://docs.microsoft.com/en-us/azure/azure-sql/database)
 
 ### Environment Setup
 
