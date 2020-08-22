@@ -1,5 +1,5 @@
 {
-  "extends": ["eslint:all", "plugin:@typescript-eslint/all", "plugin:jsx-a11y/recommended"],
+  "extends": ["eslint:all", "plugin:@stencil/recommended", "plugin:@typescript-eslint/all", "plugin:jsx-a11y/recommended"],
   "overrides": [
     {
       "files": ["*.spec.ts*"],
@@ -27,6 +27,7 @@
   },
   "plugins": ["import", "jsdoc", "jsx-a11y"],
   "rules": {
+    "@stencil/decorators-style": ["error", {"prop": "multiline"}],
     "@typescript-eslint/array-type": [
       "error",
       {
@@ -161,5 +162,10 @@
     "semi": "error",
     "space-before-function-paren": "off",
     "sort-imports": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
   }
 }
