@@ -1,0 +1,15 @@
+@import '../app.css';
+
+blockquote {
+  background: rgb(229, 229, 229);
+  border-radius: .5em;
+  padding: 1em;
+}
+
+p {
+  font-style: italic;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

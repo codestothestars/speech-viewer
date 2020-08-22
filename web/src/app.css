@@ -1,2 +1,13 @@
 body {
+  background: rgb(242, 242, 242);
+}
+
+select {
+  border: .1em solid rgb(206, 212, 218);
+  border-radius: .25em;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  margin: 0;
+  padding: .5em;
 }
