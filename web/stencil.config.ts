@@ -1,3 +1,4 @@
+import replace from '@rollup/plugin-replace';
 import { Config } from '@stencil/core';
 
 export const config: Config = {
@@ -9,5 +10,11 @@ export const config: Config = {
       type: 'www'
     }
   ],
+  rollupPlugins: {
+    before: [
+      replace({
+      })
+    ]
+  },
   taskQueue: 'async'
 };
