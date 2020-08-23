@@ -42,13 +42,11 @@ A set of end-to-end tests can be run from the front-end to test the full applica
 npm test
 ```
 
-Note that the [API server](../api) must be running in order for the tests to pass. The values in the [`.npmrc`](./npmrc) file configure the URLs used by the app and tests, which you can adjust to your environment if necessary.
+Note that the [API server](../api) must be running in order for the tests to pass. The values in the [`.npmrc`](./.npmrc) file configure the URLs used by the app and tests, which you can adjust to your environment if necessary.
 
 ### Contributing
 
 Before committing changes, make sure that you...
 
 1. Write/edit [JSDoc](https://jsdoc.app) documentation for all new/modified members.
-1. Write/edit [Jest](https://jestjs.io) unit tests for all new/modified functionality.
 1. Run [ESLint](https://eslint.org) with `npm run lint` and correct all errors.
-1. Run all unit tests with `npm test` and correct all failures.
