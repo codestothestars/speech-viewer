@@ -100,7 +100,7 @@ func start --prefix SpeechViewer
 
 ### Initialize Database
 
-Note that the database is not populated by default, and must be initialized. To do this, run Initialize function as indicated in the first usage example above.
+Note that the database is not populated by default, and must be initialized. To do this, run the Initialize function as indicated in the first usage example above.
 
 ### Database Migrations
 
