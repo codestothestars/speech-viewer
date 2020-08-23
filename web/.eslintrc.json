@@ -1,11 +1,15 @@
 {
-  "extends": ["eslint:all", "plugin:@typescript-eslint/all", "plugin:jsx-a11y/recommended"],
+  "env": {
+    "jest": true
+  },
+  "extends": ["eslint:all", "plugin:@stencil/recommended", "plugin:@typescript-eslint/all", "plugin:jsx-a11y/recommended"],
   "overrides": [
     {
-      "files": ["*.spec.ts*"],
+      "files": ["*.{e2e,spec}.ts*"],
       "rules": {
         "@typescript-eslint/init-declarations": "off",
         "@typescript-eslint/no-magic-numbers": "off",
+        "@typescript-eslint/no-use-before-define": "off",
         "jsdoc/require-jsdoc": "off",
         "max-len": [
           "error",
@@ -27,6 +31,7 @@
   },
   "plugins": ["import", "jsdoc", "jsx-a11y"],
   "rules": {
+    "@stencil/decorators-style": ["error", {"prop": "multiline"}],
     "@typescript-eslint/array-type": [
       "error",
       {
@@ -43,6 +48,7 @@
         "ignoreJSX": "multi-line"
       }
     ],
+    "@typescript-eslint/no-invalid-this": "off",
     "@typescript-eslint/no-magic-numbers": [
       "error",
       {
@@ -58,7 +64,11 @@
     ],
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars-experimental": "off",
+    "@typescript-eslint/prefer-readonly-parameter-types": "off",
     "@typescript-eslint/quotes": ["error", "single"],
+    "@typescript-eslint/restrict-template-expressions": ["error", {
+      "allowNumber": true
+    }],
     "@typescript-eslint/space-before-function-paren": [
       "error",
       {
@@ -69,6 +79,7 @@
     "array-bracket-newline": ["error", "consistent"],
     "array-element-newline": ["error", "consistent"],
     "arrow-parens": ["error", "as-needed"],
+    "dot-location": ["error", "property"],
     "func-style": ["error", "declaration"],
     "function-call-argument-newline": ["error", "consistent"],
     "function-paren-newline": ["error", "consistent"],
@@ -131,7 +142,7 @@
     "new-cap": [
       "error",
       {
-        "capIsNewExceptions": ["Component"]
+        "capIsNewExceptions": ["Component", "Event", "Prop", "State"]
       }
     ],
     "no-extra-parens": "off",
@@ -161,5 +172,10 @@
     "semi": "error",
     "space-before-function-paren": "off",
     "sort-imports": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
   }
 }

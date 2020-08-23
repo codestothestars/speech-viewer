@@ -1,0 +1,6 @@
+@import '../app.css';
+
+select {
+  display: block;
+  width: 100%;
+}

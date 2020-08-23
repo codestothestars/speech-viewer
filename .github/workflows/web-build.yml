@@ -1,4 +1,4 @@
-name: Web Build-Test
+name: Web Build
 
 on:
   push:
@@ -26,9 +26,6 @@ jobs:
 
       - name: Build code
         run: npm run build
-
-      - name: Unit test
-        run: npm test --coverage
 
       - name: Lint code
         run: npm run lint

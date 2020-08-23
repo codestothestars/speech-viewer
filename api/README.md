@@ -44,6 +44,7 @@ Invoke-WebRequest http://localhost:7071/api/destroy -Method POST
 
 - [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) 3.1
 - [Azure Functions Core Tools](https://github.com/Azure/azure-functions-core-tools)
+- [Azure SQL Database](https://docs.microsoft.com/en-us/azure/azure-sql/database)
 
 ### Environment Setup
 
@@ -55,10 +56,13 @@ Generate a local settings file for Azure Functions.
 func settings decrypt --prefix SpeechViewer
 ```
 
-Open the generated `SpeechViewer/local.settings.json` file and add the settings required by the API to the `Values` object as indicated below. The API requires an Azure SQL database for data storage.
+Open the generated `SpeechViewer/local.settings.json` file and add the settings required by the API as indicated below. The database user must have permissions to create, alter, and delete tables and their data.
 
 ```JSON
 {
+  "Host": {
+    "CORS": "*"
+  },
   "IsEncrypted": false,
   "Values": {
     "databaseName": "myDatabaseName",

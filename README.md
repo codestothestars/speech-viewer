@@ -11,6 +11,10 @@ The speech viewer consists of multiple distinct components. For simplicity in co
 
 Each directory contains its own README with instructions for building and running.
 
+### Testing
+
+A set of end-to-end tests for the full application is provided in the [web front-end](./web). See the web README for instructions.
+
 ### Contributing
 
 Before committing changes, make sure that you...

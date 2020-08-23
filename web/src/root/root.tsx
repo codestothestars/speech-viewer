@@ -13,7 +13,7 @@ export class Root {
    *
    * @returns The rendered application.
    */
-  public render = (): unknown => (
+  public render = (): unknown => ( // eslint-disable-line @stencil/own-props-must-be-private, max-len
     <ion-app>
       <ion-router useHash={false}>
         <ion-route component='app-home' url='/' />
@@ -21,5 +21,5 @@ export class Root {
 
       <ion-nav />
     </ion-app>
-  );
+  ) as unknown;
 }
