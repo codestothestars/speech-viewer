@@ -1,4 +1,4 @@
-# Speech Viewer
+# Speech Viewer [![api](https://github.com/codestothestars/speech-viewer/workflows/API%20Build-Test/badge.svg?branch=develop)](https://github.com/codestothestars/speech-viewer/actions?query=workflow%3A%22API+Build-Test%22) [![web](https://github.com/codestothestars/speech-viewer/workflows/Web%20Build/badge.svg?branch=develop)](https://github.com/codestothestars/speech-viewer/actions?query=workflow%3A%22Web+Build%22)
 
 A website for viewing famous historical speeches.
 
