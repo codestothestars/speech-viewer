@@ -5,7 +5,7 @@
   "extends": ["eslint:all", "plugin:@stencil/recommended", "plugin:@typescript-eslint/all", "plugin:jsx-a11y/recommended"],
   "overrides": [
     {
-      "files": ["*.spec.ts*"],
+      "files": ["*.{e2e,spec}.ts*"],
       "rules": {
         "@typescript-eslint/init-declarations": "off",
         "@typescript-eslint/no-magic-numbers": "off",
