@@ -18,6 +18,13 @@ Once you've installed the above dependencies and cloned this repository, install
 npm install
 ```
 
+### Configure
+
+If necessary, adjust the values in the [`.npmrc`](./.npmrc) file to match your environment.
+
+- `speech_viewer_api` - The URL of the [API server](../api).
+- `speech_viewer_web` - The URL of the web front-end (used only by the [end-to-end tests](#end-to-end-tests)).
+
 ### Start
 
 Use the following command to run the website in the development server provided by [Stencil](https://stenciljs.com).
@@ -25,6 +32,8 @@ Use the following command to run the website in the development server provided 
 ```Shell
 npm start
 ```
+
+Note that the API server must be running in order for all features of the speech viewer to function.
 
 ### Build
 
@@ -41,8 +50,6 @@ A set of end-to-end tests can be run from the front-end to test the full applica
 ```Shell
 npm test
 ```
-
-Note that the [API server](../api) must be running in order for the tests to pass. The values in the [`.npmrc`](./.npmrc) file configure the URLs used by the app and tests, which you can adjust to your environment if necessary.
 
 ### Contributing
 
